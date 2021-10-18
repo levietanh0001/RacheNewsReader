@@ -3,3 +3,9 @@ item < icons
 --- styles.xml
 tab style in app_bar_main.xml 
 style="@style/CategoryTab"
+--- NEWS API
+technic dude
+https://www.youtube.com/watch?v=yuEoUx_HDRw
+https://www.deepcrazyworld.com/create-news-application-android-studio/
+--- article_list_item.xml
+icons: tools:background="@mipmap/ic_launcher"
