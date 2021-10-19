@@ -1,5 +1,0 @@
---- strings .xml
-item < icons
---- styles.xml
-tab style in app_bar_main.xml 
-style="@style/CategoryTab"
