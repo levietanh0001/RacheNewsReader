@@ -3,12 +3,25 @@ package com.example.android.rachenewsreader.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.android.rachenewsreader.Adapter;
+import com.example.android.rachenewsreader.ApiUtilities;
+import com.example.android.rachenewsreader.Constants;
+import com.example.android.rachenewsreader.ModelClass;
 import com.example.android.rachenewsreader.R;
+import com.example.android.rachenewsreader.mainNews;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +70,45 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    ArrayList<ModelClass> modelClassArrayList;
+    Adapter adapter;
+    String country="us";
+    private RecyclerView recyclerViewofhome;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
+
+        recyclerViewofhome = v.findViewById(R.id.recyclerviewofhome);
+        modelClassArrayList = new ArrayList<>();
+        recyclerViewofhome.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new Adapter(getContext(), modelClassArrayList);
+        recyclerViewofhome.setAdapter(adapter);
+
+
+        findNews();
+
+        return v;
+
+    }
+
+    private void findNews() {
+        ApiUtilities.getApiInterface().getNews(country, 100, Constants.API_KEY).enqueue(new Callback<mainNews>() {
+            @Override
+            public void onResponse(Call<mainNews> call, Response<mainNews> response) {
+                if(response.isSuccessful()){
+                    modelClassArrayList.addAll(response.body().getArticles());
+                    adapter.notifyDataSetChanged();
+
+                }
+            }
+            @Override
+            public void onFailure(Call<mainNews> call, Throwable t) {
+
+            }
+        });
     }
 }
