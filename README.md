@@ -1,6 +1,9 @@
 # RACHENEWSREADER
 ## SCREENSHOTS
-18/10/2021
+19/10/2021
 
-![image](https://user-images.githubusercontent.com/47298653/137760403-95113e7f-671a-4a5b-9b65-abb4fe569f8d.png)
-![image](https://user-images.githubusercontent.com/47298653/137760451-a16a0a0d-8db9-48e9-b55e-4eed98966609.png)
+![image](https://user-images.githubusercontent.com/47298653/137854117-35fe1cd4-e1a8-4184-9fb7-129b748240e1.png)
+![image](https://user-images.githubusercontent.com/47298653/137854148-3ed2769f-82e0-4595-989b-10126f0cc50e.png)
+
+
+
