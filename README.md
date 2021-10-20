@@ -1,6 +1,6 @@
 # RACHENEWSREADER - NEWSAPI
 ## LACKED FEATURES
-- Swipte down to refresh contents
+- Swipe down to refresh contents
 - Settings
 ## SCREENSHOTS
 ![image](https://user-images.githubusercontent.com/47298653/137864111-a9ff7e07-1389-40ba-84dd-12f9332dabaf.png)
