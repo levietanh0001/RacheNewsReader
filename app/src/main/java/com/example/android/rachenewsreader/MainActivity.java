@@ -3,15 +3,7 @@ package com.example.android.rachenewsreader;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Menu;
 
-import com.example.android.rachenewsreader.ViewPagerAdapter;
-import com.example.android.rachenewsreader.fragment.HomeFragment;
-import com.example.android.rachenewsreader.fragment.DashboardFragment;
-import com.example.android.rachenewsreader.fragment.ScienceFragment;
-import com.example.android.rachenewsreader.fragment.WorldFragment;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 //import com.example.android.newsfeed.adapter.CategoryFragmentPagerAdapter;
 
@@ -19,17 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.android.rachenewsreader.databinding.ActivityMainBinding;
 import com.google.android.material.tabs.TabLayout;
-import com.example.android.rachenewsreader.Constants;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity
@@ -71,8 +58,8 @@ public class MainActivity extends AppCompatActivity
                     case Constants.FRAGMENT_HOME:
                         tab.setText(getString(R.string.home));
                         break;
-                    case Constants.FRAGMENT_WORLD:
-                        tab.setText(getString(R.string.world));
+                    case Constants.FRAGMENT_SPORTS:
+                        tab.setText(getString(R.string.sports));
                         break;
                     case Constants.FRAGMENT_SCIENCE:
                         tab.setText(getString(R.string.science));
@@ -98,8 +85,8 @@ public class MainActivity extends AppCompatActivity
                         currentFragment = Constants.FRAGMENT_HOME;
                         navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
                         break;
-                    case Constants.FRAGMENT_WORLD:
-                        currentFragment = Constants.FRAGMENT_WORLD;
+                    case Constants.FRAGMENT_SPORTS:
+                        currentFragment = Constants.FRAGMENT_SPORTS;
                         navigationView.getMenu().findItem(R.id.nav_world).setChecked(true);
                         break;
                     case Constants.FRAGMENT_SCIENCE:
@@ -136,9 +123,9 @@ public class MainActivity extends AppCompatActivity
             }
         }
         else if (id == R.id.nav_world) {
-            if (Constants.FRAGMENT_WORLD != currentFragment) {
-                mViewPager2.setCurrentItem(Constants.FRAGMENT_WORLD);
-                currentFragment = Constants.FRAGMENT_WORLD;
+            if (Constants.FRAGMENT_SPORTS != currentFragment) {
+                mViewPager2.setCurrentItem(Constants.FRAGMENT_SPORTS);
+                currentFragment = Constants.FRAGMENT_SPORTS;
             }
         }
         else if (id == R.id.nav_science) {
