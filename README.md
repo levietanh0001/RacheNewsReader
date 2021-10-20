@@ -1,4 +1,7 @@
 # RACHENEWSREADER - NEWSAPI
+## LACKED FEATURES
+- Swipte down to refresh contents
+- Settings
 ## SCREENSHOTS
 19/10/2021
 
