@@ -33,7 +33,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/home_24"/>
+                    android:src="@drawable/home_50"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/laboratory_24"/>
+                    android:src="@drawable/test_tube_50"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
