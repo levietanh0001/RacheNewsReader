@@ -14,5 +14,4 @@
         android:fitsSystemWindows="true"
         android:padding="2dp"
         />
-
 </FrameLayout>

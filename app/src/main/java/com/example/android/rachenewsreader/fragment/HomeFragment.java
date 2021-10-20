@@ -88,11 +88,8 @@ public class HomeFragment extends Fragment {
         adapter = new Adapter(getContext(), modelClassArrayList);
         recyclerViewofhome.setAdapter(adapter);
 
-
         findNews();
-
         return v;
-
     }
 
     private void findNews() {
@@ -102,7 +99,6 @@ public class HomeFragment extends Fragment {
                 if(response.isSuccessful()){
                     modelClassArrayList.addAll(response.body().getArticles());
                     adapter.notifyDataSetChanged();
-
                 }
             }
             @Override
